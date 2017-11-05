@@ -3,4 +3,27 @@
     <groupId>org.akka.splitbrain</groupId>
     <artifactId>app</artifactId>
     <version>1.0-SNAPSHOT</version>
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>io.fabric8</groupId>
+                <artifactId>docker-maven-plugin</artifactId>
+                <version>0.23.0</version>
+                <configuration>
+                    <images>
+                        <image>
+                            <name>akka-splitbrain-app</name>
+                            <build>
+                                <dockerFileDir>build</dockerFileDir>
+                                <tags>
+                                    <tag>latest</tag>
+                                </tags>
+                            </build>
+                        </image>
+                    </images>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
 </project>
