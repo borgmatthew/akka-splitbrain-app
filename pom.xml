@@ -27,6 +27,12 @@
             <artifactId>spring-boot-starter-web</artifactId>
             <version>${springboot.version}</version>
         </dependency>
+        <dependency>
+            <groupId>com.github.TanUkkii007</groupId>
+            <artifactId>akka-cluster-custom-downing_2.11</artifactId>
+            <version>0.0.9</version>
+            <type>pom</type>
+        </dependency>
     </dependencies>
 
     <build>
