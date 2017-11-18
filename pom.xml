@@ -36,7 +36,7 @@
     </dependencies>
 
     <build>
-        <finalName>akka-splitbrain-app</finalName>
+        <finalName>einstein</finalName>
         <plugins>
             <plugin>
                 <groupId>io.fabric8</groupId>
@@ -45,7 +45,7 @@
                 <configuration>
                     <images>
                         <image>
-                            <name>akka-splitbrain-app</name>
+                            <name>einstein</name>
                             <build>
                                 <dockerFileDir>${project.basedir}/src/main/docker/</dockerFileDir>
                                 <assembly>
