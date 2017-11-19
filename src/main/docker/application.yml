@@ -4,3 +4,10 @@ services:
 
   einstein:
     image: einstein:latest
+    depends_on:
+      - zookeeper
+
+  zookeeper:
+    image: zookeeper:3.4.11
+    ports:
+     - 2181:2181

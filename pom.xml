@@ -26,7 +26,7 @@
     <dependencies>
         <dependency>
             <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-web</artifactId>
+            <artifactId>spring-boot-starter</artifactId>
             <version>${springboot.version}</version>
         </dependency>
         <dependency>
@@ -35,7 +35,6 @@
             <version>0.0.9</version>
             <type>pom</type>
         </dependency>
-        <!-- https://mvnrepository.com/artifact/com.typesafe.akka/akka-actor -->
         <dependency>
             <groupId>com.typesafe.akka</groupId>
             <artifactId>akka-actor_${scala.version}</artifactId>
@@ -45,6 +44,21 @@
             <groupId>com.typesafe.akka</groupId>
             <artifactId>akka-cluster_${scala.version}</artifactId>
             <version>${akka.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.zookeeper</groupId>
+            <artifactId>zookeeper</artifactId>
+            <version>3.4.11</version>
+        </dependency>
+        <dependency>
+            <groupId>de.heikoseeberger</groupId>
+            <artifactId>constructr_${scala.version}</artifactId>
+            <version>0.18.0</version>
+        </dependency>
+        <dependency>
+            <groupId>com.lightbend.constructr</groupId>
+            <artifactId>constructr-coordination-zookeeper_${scala.version}</artifactId>
+            <version>0.4.0</version>
         </dependency>
     </dependencies>
 

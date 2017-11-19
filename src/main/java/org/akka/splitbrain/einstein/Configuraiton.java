@@ -13,4 +13,4 @@ public class Configuraiton {
     public ActorSystem actorSystem() {
         return ActorSystem.create(EINSTEIN);
     }
-} 
+}
