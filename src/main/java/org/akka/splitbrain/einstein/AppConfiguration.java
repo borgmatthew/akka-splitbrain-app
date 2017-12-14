@@ -11,6 +11,8 @@ public class AppConfiguration {
 
     @Bean
     public ActorSystem actorSystem() {
-        return ActorSystem.create(EINSTEIN);
+        final ActorSystem actorSystem = ActorSystem.create(EINSTEIN);
+        actorSystem.registerOnTermination(() -> System.exit(1));
+        return actorSystem;
     }
 }
