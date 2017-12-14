@@ -33,7 +33,6 @@
             <groupId>com.github.TanUkkii007</groupId>
             <artifactId>akka-cluster-custom-downing_${scala.version}</artifactId>
             <version>0.0.9</version>
-            <type>pom</type>
         </dependency>
         <dependency>
             <groupId>com.typesafe.akka</groupId>
@@ -80,7 +79,19 @@
                         <image>
                             <name>einstein</name>
                             <build>
-                                <dockerFileDir>${project.basedir}/src/main/docker/</dockerFileDir>
+                                <dockerFileDir>${project.basedir}/src/main/docker/einstein</dockerFileDir>
+                                <assembly>
+                                    <descriptorRef>artifact</descriptorRef>
+                                </assembly>
+                                <tags>
+                                    <tag>latest</tag>
+                                </tags>
+                            </build>
+                        </image>
+                        <image>
+                            <name>nginx-proxy</name>
+                            <build>
+                                <dockerFileDir>${project.basedir}/src/main/docker/nginx</dockerFileDir>
                                 <assembly>
                                     <descriptorRef>artifact</descriptorRef>
                                 </assembly>

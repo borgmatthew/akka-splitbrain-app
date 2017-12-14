@@ -2,14 +2,21 @@ version: "3"
 
 services:
 
-  einstein:
-    image: einstein:latest
-    ports:
-      - 8080:8080
-    depends_on:
-      - zookeeper
-
   zookeeper:
     image: zookeeper:3.4.11
     ports:
      - 2181:2181
+
+  einstein:
+    image: einstein:latest
+    depends_on:
+      - zookeeper
+    cap_add:
+      - NET_ADMIN
+
+  nginx:
+    image: nginx-proxy:latest
+    ports:
+      - 8080:8080
+    depends_on:
+      - einstein
