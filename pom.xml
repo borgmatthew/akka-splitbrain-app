@@ -49,7 +49,6 @@
             <artifactId>akka-cluster-sharding_${scala.version}</artifactId>
             <version>${akka.version}</version>
         </dependency>
-
         <dependency>
             <groupId>org.apache.zookeeper</groupId>
             <artifactId>zookeeper</artifactId>
