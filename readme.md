@@ -25,11 +25,11 @@ To fulfill the first requirement, this service was designed to be part
 of a cluster where multiple einstein services may be running at the same
 time.
 
-To fulfill the second requirement, the einstein service was designed to
-have an actor represent a name. The actor is responsible to calculate
-the IQ and return the same value whenever asked for it. This is used
-alongside cluster sharding, to make sure that only one actor for the
-same name exists within the cluster.
+To fulfill the second requirement, the einstein service utilises the
+actor model to represent names. An actor is assigned a name and is
+responsible to calculate the IQ and return the same value whenever asked
+for it. This is used alongside cluster sharding, to make sure that only
+one actor for the same name exists within the cluster.
 
 ## Building the application
 Perform the following steps:
@@ -75,5 +75,28 @@ the latter, add the following to your `settings.xml` file:
 ```
 
 ## Running the application
+To run this application, make sure that you have docker and
+docker-compose installed.
+
+### Starting the application
+Navigate to the `docker` directory and run the
+following command:
+
+`docker-compose -f application.yml up`
+
+To run multiple instances of the `einstein` service:
+
+`docker-compose -f application.yml up --scale einstein=3 einstein
+zookeeper nginx`
+
+### Stopping the application
+Navigate to the `docker` directory and run the
+following command:
+
+`docker-compose -f application.yml down`
 
 ### Asking for an IQ
+To get an IQ value for a name, perform a `GET` request on the following
+URL:
+
+`http://localhost:8080/iq/{name}`
