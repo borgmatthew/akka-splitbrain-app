@@ -29,11 +29,11 @@
             <artifactId>spring-boot-starter-web</artifactId>
             <version>${springboot.version}</version>
         </dependency>
-        <dependency>
-            <groupId>com.github.TanUkkii007</groupId>
-            <artifactId>akka-cluster-custom-downing_${scala.version}</artifactId>
-            <version>0.0.9</version>
-        </dependency>
+        <!--<dependency>-->
+            <!--<groupId>com.github.TanUkkii007</groupId>-->
+            <!--<artifactId>akka-cluster-custom-downing_${scala.version}</artifactId>-->
+            <!--<version>0.0.9</version>-->
+        <!--</dependency>-->
         <dependency>
             <groupId>com.typesafe.akka</groupId>
             <artifactId>akka-actor_${scala.version}</artifactId>
